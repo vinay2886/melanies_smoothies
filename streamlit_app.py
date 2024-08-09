@@ -47,12 +47,7 @@ if ingredients_list:
  
  #st.write(my_insert_stmt)
  #st.stop()
- # New section to display fruityvice nutrition information
- import requests
- fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
- st.text(fruityvice_response.json())
-
-
+ 
 time_to_insert = st.button("Submit Order")
 if time_to_insert:
   session.sql(my_insert_stmt).collect()
